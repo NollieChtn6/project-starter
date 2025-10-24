@@ -1,0 +1,53 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Build output
+dist/
+build/
+out/
+
+# Test results
+coverage/
+*.lcov
+*.log
+*.tmp
+
+# Runtime data
+*.pid
+*.seed
+*.tsbuildinfo
+
+# Environment variables
+.env
+!.env.sample
+
+# VSCode settings
+.vscode/
+.history/
+
+# Mac / Linux
+.DS_Store
+Thumbs.db
+
+# Husky / git hooks (internal)
+.husky/_
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Misc
+*.bak
+*.swp
+*.swo
+
+# Frontend specific
+apps/frontend/node_modules/
+apps/frontend/dist/
+apps/frontend/build/
+apps/frontend/.vite/
+apps/frontend/.cache/
