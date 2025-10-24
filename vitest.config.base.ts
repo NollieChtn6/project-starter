@@ -8,6 +8,8 @@ export default defineConfig({
     coverage: {
       provider: "v8",
       reporter: ["text", "json", "html"],
+      reportsDirectory: "coverage",
+      include: ["apps/backend/src/**/*.{ts,tsx}", "apps/frontend/src/**/*.{ts,tsx}"],
     },
   },
 });
