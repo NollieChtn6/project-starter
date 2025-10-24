@@ -12,10 +12,16 @@
     "================== LINTING": "",
     "lint": "biome check .",
     "lint:fix": "biome check --apply .",
+    "================== COVERAGE": "",
+    "coverage:backend": "pnpm --filter backend run coverage",
+    "coverage:frontend": "pnpm --filter frontend run coverage",
+    "coverage": "pnpm coverage:backend && pnpm coverage:frontend",
     "================== TESTS": "",
     "test": "pnpm test:backend && pnpm test:frontend",
     "test:backend": "pnpm --filter backend test",
     "test:frontend": "pnpm --filter frontend test",
+    "test:ui:backend": "pnpm --filter backend test:ui",
+    "test:ui:frontend": "pnpm --filter frontend test:ui",
     "================== TYPE CHECKING": "",
     "typecheck": "pnpm typecheck:backend && pnpm typecheck:frontend",
     "typecheck:frontend": "pnpm --filter frontend run typecheck",
@@ -26,8 +32,14 @@
     "build:backend": "pnpm --filter backend run build"
   },
   "lint-staged": {
-    "apps/backend/src/**/*.{ts,tsx,js,jsx}": ["biome check --apply", "git add"],
-    "apps/frontend/src/**/*.{ts,tsx,js,jsx}": ["biome check --apply", "git add"]
+    "apps/backend/src/**/*.{ts,tsx,js,jsx}": [
+      "biome check --apply",
+      "git add"
+    ],
+    "apps/frontend/src/**/*.{ts,tsx,js,jsx}": [
+      "biome check --apply",
+      "git add"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -39,14 +51,16 @@
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.2",
     "@vitejs/plugin-react": "^5.0.4",
+    "@vitest/coverage-v8": "4.0.2",
+    "@vitest/ui": "^4.0.2",
     "biome": "^0.3.3",
     "globals": "^16.4.0",
-    "jest": "^30.2.0",
     "lint-staged": "^16.2.6",
     "ts-jest": "^29.4.5",
     "ts-node-dev": "^2.0.0",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.45.0",
-    "vite": "^7.1.7"
+    "vite": "^7.1.7",
+    "vitest": "^4.0.2"
   }
 }
