@@ -12,45 +12,77 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: "pnpm"
-      - run: pnpm install
-      - run: pnpm lint
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Lint code
+        run: pnpm lint
 
   typecheck:
     name: Type Check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: "pnpm"
-      - run: pnpm install
-      - run: pnpm typecheck
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Type check
+        run: pnpm typecheck
 
   build:
     name: Build Projects
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: "pnpm"
-      - run: pnpm install
-      - run: pnpm build
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build projects
+        run: pnpm build
 
   test:
     name: Run Tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: "pnpm"
-      - run: pnpm install
-      - run: pnpm test
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run tests
+        run: pnpm test
