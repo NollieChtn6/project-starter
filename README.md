@@ -4,14 +4,12 @@ This repository serves as a **starter template** for full-stack TypeScript proje
 
 It includes **both frontend and backend setups** with standard tooling and best practices out of the box.
 
----
-
 ## Monorepo
 
 - Workspace structure with `apps/frontend` and `apps/backend`
 - Centralized dependency management using `pnpm`
 
-### Backend
+## Backend
 
 - Node.js + TypeScript
 - `ts-node-dev` for development server
