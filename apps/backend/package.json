@@ -3,6 +3,7 @@
   "main": "index.ts",
   "private": true,
   "scripts": {
+    "start": "ts-node-dev --respawn --transpile-only src/index.ts",
     "test": "vitest",
     "test:ui": "vitest --ui",
     "lint": "biome check .",
@@ -10,5 +11,8 @@
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "envalid": "^8.1.0"
   }
 }
