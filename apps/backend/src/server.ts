@@ -1,4 +1,3 @@
-import "reflect-metadata";
 import { env } from "./env";
 
 export async function startServer(): Promise<void> {
