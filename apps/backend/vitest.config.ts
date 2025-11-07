@@ -9,6 +9,7 @@ export default mergeConfig(
       environment: "node",
       include: ["src/**/*.test.ts"],
       coverage: {
+        enabled: true,
         reportsDirectory: "coverage/",
       },
     },
